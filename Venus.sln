@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Venus", "Venus\Venus.vcxproj", "{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MTGliese", "build\windows\MTGliese.vcxproj", "{7C3944CE-76EA-3CA3-9E11-33086F16AFBA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MTHercules", "build\windows\MTHercules.vcxproj", "{7C3944CE-76EA-3CA3-9E11-33086F16AFBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

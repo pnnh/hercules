@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.28...3.31)
 
-project(Gliese VERSION 0.1.0 LANGUAGES C CXX)
+project(Hercules VERSION 0.1.0 LANGUAGES C CXX)
 
 # 设置语言标准
 set(CMAKE_C_STANDARD 17)
@@ -31,11 +31,16 @@ set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 
 
-set(LIB_NAME "MTGliese")
-file(GLOB_RECURSE GLIESE_SOURCES gliese/*.cpp quark/*.cpp)
+set(LIB_NAME "MTHercules")
+file(GLOB_RECURSE HERCULES_SOURCES
+        hercules/*.cpp
+        quark/core/*.cpp
+        quark/infra/*.cpp
+        quark/services/filesystem/*.cpp
+        quark/services/logger/*.cpp)
 
 add_library(${LIB_NAME} STATIC)
-target_sources(${LIB_NAME} PUBLIC ${GLIESE_SOURCES})
+target_sources(${LIB_NAME} PUBLIC ${HERCULES_SOURCES})
 
 # 查找并引用日志库
 find_package(spdlog CONFIG REQUIRED)
