@@ -13,6 +13,13 @@
     <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="Assets\developer2.jpg" />
+    <Content Remove="Assets\img2.jpg" />
+    <Content Remove="Assets\img3.jpg" />
+    <Content Remove="Assets\img4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\bird.jpg" />
     <None Remove="MainPage.xaml" />
     <None Remove="Pages\Page2.xaml" />
   </ItemGroup>
@@ -43,6 +50,7 @@
     </CsWinRTExcludes>
     <CsWinRTEnableLogging>true</CsWinRTEnableLogging>
     <SupportedOSPlatformVersion>10.0.26100.0</SupportedOSPlatformVersion>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -54,6 +62,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CppWinRTProjection\CppWinRTProjection.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Assets\bird.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -76,6 +90,10 @@
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
   </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <WebView2UseWinRT>False</WebView2UseWinRT>
+    <WebView2LoaderPreference>Dynamic</WebView2LoaderPreference>
+  </PropertyGroup>
 
   <!-- 
     Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution 
